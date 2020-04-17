@@ -11,7 +11,6 @@ import { GeneriService } from 'src/app/service/generi.service';
 export class ListaComponent implements OnInit {
 
   fontStyle:string="bold";
-  select: boolean;
   messaggio: string;
   @Output()
   showDetail: EventEmitter<number>= new EventEmitter();
@@ -25,7 +24,6 @@ export class ListaComponent implements OnInit {
   
   constructor(private filmListService: FilmListService, private listGenere: GeneriService) {
     this.filmList=filmListService.getFilmList();
-    this.select=false;
     this.generi=listGenere.getList();
    }
 

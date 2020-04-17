@@ -4,4 +4,5 @@ export interface FilmItem {
     durataMinuti: number;
     genere: string;
     favourited: boolean ;
+    show:boolean;
 }

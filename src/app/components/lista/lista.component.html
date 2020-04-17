@@ -1,3 +1,5 @@
-<div>
-    <ng-container *ngFor="let filmItem of filmList">{{filmItem.name}}<br></ng-container>
-</div>
+<ng-container *ngFor="let filmItem of filmList">
+    <div *ngIf="filmItem.show"> {{filmItem.name}}
+        <button [routerLink]="['/FilmDetail', filmItem.id]">></button>
+        <button (click)="filmItem.show = false"> hide</button></div>
+</ng-container>
