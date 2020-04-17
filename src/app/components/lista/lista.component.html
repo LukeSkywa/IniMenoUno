@@ -1,5 +1,10 @@
 <div>
-    <button [disabled]="true" (click)="resetList();disablebutton()">mostra tutti</button><button (click)="favouriteList()">favourites</button><button (click)="showHidden()">nascosti</button>
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle value="reset">
+            <button (click)="resetList();disablebutton()">mostra tutti</button></mat-button-toggle>
+        <button (click)="favouriteList()">favourites</button>
+        <button (click)="showHidden()">nascosti</button>
+    </mat-button-toggle-group>
 </div>
 <ng-container *ngFor="let filmItem of filmList | slice : 0 :showmore">
     <div *ngIf="filmItem.show"> {{filmItem.name}}
