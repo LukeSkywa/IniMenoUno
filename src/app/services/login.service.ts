@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '../models/user.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
+  add(user: any) {
+    throw new Error("Method not implemented.");
+  }
 
   private filmList:User[]=[
     {username:"123",password:"123",admin:true},
