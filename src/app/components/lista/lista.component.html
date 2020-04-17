@@ -1,5 +1,13 @@
-<ng-container *ngFor="let filmItem of filmList">
+<div>
+    <button [disabled]="true" (click)="resetList();disablebutton()">mostra tutti</button><button (click)="favouriteList()">favourites</button><button (click)="showHidden()">nascosti</button>
+</div>
+<ng-container *ngFor="let filmItem of filmList | slice : 0 :showmore">
     <div *ngIf="filmItem.show"> {{filmItem.name}}
         <button [routerLink]="['/FilmDetail', filmItem.id]">></button>
-        <button (click)="filmItem.show = false"> hide</button></div>
+        <button (click)="filmItem.show = false"> hide</button>
+        <ng-container *ngIf="filmItem.favourited ==false; else elsebutton"><button (click)="filmItem.favourited=true">Favourite</button></ng-container>
+        <ng-template #elsebutton><button (click)="filmItem.favourited=false">Unfavourite</button></ng-template>
+    </div>
 </ng-container>
+<ng-container *ngIf="showmore<filmList.length; else elseblock"><button (click)="showMoreItems()">Mostra Altri</button></ng-container>
+<ng-template #elseblock><button (click)="showmore=5">Comprimi</button></ng-template>

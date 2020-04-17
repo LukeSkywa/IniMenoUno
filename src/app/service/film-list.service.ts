@@ -7,10 +7,14 @@ import { FilmItem } from '../models/film-item';
 export class FilmListService {
   private filmListStored:FilmItem[]=[     
     { id:1, name:"Avatar", durataMinuti:120, genere:"azione", favourited:false, show:true},
-    { id:2, name:"American Pie", durataMinuti:120,genere:"commedia", favourited:false,show:true},
-    { id:3, name:"Una notte da Leoni", durataMinuti:120, genere:"commedia", favourited:false,show:true},
-    { id:4, name:"Man in Black", durataMinuti:120, genere:"commedia",favourited:false,show:true},
-    { id:5, name:"Seven Sisters", durataMinuti:120, genere:"psicologico", favourited:false,show:true},
+    { id:2, name:"American Pie", durataMinuti:100,genere:"commedia", favourited:false,show:true},
+    { id:3, name:"Una notte da Leoni", durataMinuti:100, genere:"commedia", favourited:false,show:true},
+    { id:4, name:"Man in Black", durataMinuti:90, genere:"commedia",favourited:false,show:true},
+    { id:5, name:"Seven Sisters", durataMinuti:85, genere:"psicologico", favourited:false,show:true},
+    { id:6, name:"Toy Story", durataMinuti:80, genere:"famiglia", favourited:false,show:true},
+    { id:7, name:"James Bond 007", durataMinuti:1337, genere:"spionaggio", favourited:false,show:true},
+    { id:8, name:"Shape of Water", durataMinuti:250, genere:"psicologico", favourited:false,show:true},
+    { id:9, name:"The Clone Wars", durataMinuti:140, genere:"scifi", favourited:false,show:true},
   ];
 
   getFilmList(): FilmItem[]{
