@@ -1,0 +1,14 @@
+<div>
+    <form  (ngSubmit)="onSubmit(profileform.value)" [formGroup]="profileform">
+        <div >
+          <label for="nome">Nome</label>
+          <input type="text"  id="nome"  required formControlName="nome">
+        </div>
+        <div >
+          <label for="cognome">cognome</label>
+          <input type="text"  id="cognome"  required formControlName="cognome">
+        </div>
+        <button (click)="back()">Back</button>
+        <button  type="submit">conferma</button>
+    </form>
+</div>

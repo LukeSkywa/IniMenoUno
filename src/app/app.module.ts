@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfiloComponent } from './profilo/profilo.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 
@@ -16,6 +17,7 @@ import { ProfiloComponent } from './profilo/profilo.component';
     LoginComponent,
     RegistrazioneComponent,
     ProfiloComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,

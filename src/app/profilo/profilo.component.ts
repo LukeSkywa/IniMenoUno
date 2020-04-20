@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ListItem } from '../models/profile.interface';
+import { ProfileService } from '../services/profile.service';
 
 
 @Component({
@@ -9,9 +11,13 @@ import { Router } from '@angular/router';
 })
 export class ProfiloComponent implements OnInit {
 
-  constructor(private router: Router) { 
-    
+  profileList:ListItem[]=[];
+
+  constructor(private profileService: ProfileService, private router: Router) { 
+    this.profileList=this.profileService.getLista();
   }
+
+
 
   modifica(){
     this.router.navigate(['/edit-profile']);
