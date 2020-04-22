@@ -33,15 +33,15 @@ item:FilmItem;
       this.filmListStored.find(item =>item.id==id).favourited=true;
   }
   removeFavourite(id:number){
-    //aggiunge ad una lista quelli preferiti id
+    //toglie da una lista quelli preferiti id
       this.filmListStored.find(item =>item.id==id).favourited=false;
   }
   setShowStatus(id:number){
-    //aggiunge ad una lista quelli preferiti id
+    //mostra item id
       this.filmListStored.find(item =>item.id==id).show=true;
   }
   removeShowStatus(id:number){
-    //aggiunge ad una lista quelli preferiti id
+    //nasconde item id
       this.filmListStored.find(item =>item.id==id).show=false;
   }
   setFilmList(filmList:FilmItem[]):void{
