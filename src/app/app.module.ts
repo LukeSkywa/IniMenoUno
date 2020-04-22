@@ -6,6 +6,8 @@ import { ListaComponent } from './components/lista/lista.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { FilmDetailComponent } from './components/film-detail/film-detail.component';
+
 
 
 
@@ -13,6 +15,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
   declarations: [
     AppComponent,
     ListaComponent,
+    FilmDetailComponent,
   ],
   imports: [
     BrowserModule,
