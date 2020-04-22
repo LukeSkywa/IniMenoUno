@@ -1,0 +1,135 @@
+.topnav {
+  overflow: hidden;
+  background-color: none;
+}
+
+ 
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+ 
+
+.topnav a:hover {
+  background-color: none;
+  color: black;
+}
+
+ 
+
+.topnav a.active {
+  background-color: none;
+  color: white;
+}
+a.destra{
+  float: right
+}
+div.centro{
+  text-align: center;
+  position: absolute;
+  left:40%;
+  color: white;
+}
+
+ 
+
+div.form{
+  text-align: center;
+  position: absolute;
+  left:36%;
+  top:20%;
+}
+
+input{
+  color:white;
+  font-weight: bold;
+}
+
+
+input.user[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid white;
+  background: none;
+  background: url("../../assets/images/username.png") no-repeat scroll 4px 4px;
+  padding-left:40px;
+}
+
+input.telefono[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid white;
+  background: none;
+  background: url("../../assets/images/telefono.png") no-repeat scroll 4px 4px;
+  padding-left:40px;
+}
+input.email[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid white;
+  background: none;
+  background: url("../../assets/images/email.png") no-repeat scroll 4px 4px;
+  padding-left:40px;
+}
+
+ 
+
+
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  background: url("../../assets/images/gender.png") no-repeat scroll 4px 4px;
+  padding-left:40px;
+   }
+
+ 
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:white;
+    font-weight: bold;
+}
+button.invia{
+  padding: 10px 140px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: lightblue;
+  background-color: white;
+  border: none;
+  border-radius: 35px;
+}
+option.gender{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid white;
+  background: white;
+  color: blue;
+}
+textarea{
+  resize: none;
+  background: none ;
+  color:white;
+  font-weight: bold;
+}

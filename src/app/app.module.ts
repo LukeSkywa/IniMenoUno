@@ -8,6 +8,7 @@ import { RegistrazioneComponent } from './registrazione/registrazione.component'
 import { AppRoutingModule } from './app-routing.module';
 import { ProfiloComponent } from './profilo/profilo.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 
 
@@ -18,6 +19,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     RegistrazioneComponent,
     ProfiloComponent,
     EditProfileComponent,
+    FeedbackComponent,
   ],
   imports: [
     BrowserModule,
