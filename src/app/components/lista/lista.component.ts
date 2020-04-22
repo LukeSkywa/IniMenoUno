@@ -2,7 +2,7 @@ import { Component, OnInit, EventEmitter, Output, MissingTranslationStrategy } f
 import { FilmItem } from 'src/app/models/film-item';
 import { FilmListService } from 'src/app/service/film-list.service';
 import { GeneriService } from 'src/app/service/generi.service';
-import { Button } from 'protractor';
+
 
 @Component({
   selector: 'app-lista',
@@ -14,8 +14,14 @@ export class ListaComponent implements OnInit {
   showmore:number= 5;
   fontStyle:string="bold";
   messaggio: string;
+  resetcheck: boolean=true  ;
+  favouritecheck: boolean=false;
+  hidecheck:boolean=false;
+  favouritedlist:FilmItem[]=[];
   @Output()
   showDetail: EventEmitter<number>= new EventEmitter();
+  @Output() 
+  makeFavourite: EventEmitter<number> = new EventEmitter();
   hiddenList:FilmItem[]=[];
   //genereId:string='fps';
   genereId:number=0;
@@ -27,6 +33,7 @@ export class ListaComponent implements OnInit {
   constructor(private filmListService: FilmListService, private listGenere: GeneriService) {
     this.filmList=filmListService.getFilmList();
     this.generi=listGenere.getList();
+    this.favouritedlist=filmListService.getFilmList();
    }
 
   ngOnInit(): void {
@@ -35,7 +42,18 @@ export class ListaComponent implements OnInit {
   dettaglio(id: number){
     this.showDetail.emit(id);
   }
-
+  setFavourite(id:number){
+    this.filmListService.setFavourite(id);
+  }
+  removeFavourite(id:number){
+    this.filmListService.removeFavourite(id);
+  }
+  setShowStatus(id:number){
+    this.filmListService.setShowStatus(id);
+  }
+  removeShowStatus(id:number){
+    this.filmListService.removeShowStatus(id);
+  }
   showEdit(){
     if(sessionStorage.getItem('login')==="admin")
       return true;
@@ -45,22 +63,26 @@ export class ListaComponent implements OnInit {
   {
      this.showmore = Number(this.showmore) + 5;        
   }
-  disablebutton():boolean { 
 
-    return 
-  }
   resetList()
   {
     this.filmList=this.filmListService.getFilmList();
     
-  }
+    this.resetcheck=true;
+    this.favouritecheck=false;
+    this.hidecheck=false;
+  } 
   favouriteList(){
-    this.filmList=this.filmList.filter(film => film.favourited ==true);
+    this.filmList=this.filmListService.getFavouriteList();
+    this.resetcheck=false;
+    this.favouritecheck=true;
+    this.hidecheck=false;
   }
   showHidden(){
-    this.filmList.forEach(film => {
-      film.show=!film.show;
-    });
+    this.filmList=this.filmListService.getHiddenList();
+    this.resetcheck=false;
+    this.favouritecheck=false;
+    this.hidecheck=true;
   }
   /*ricerca(id:number){
     //this.genereId=this.listGenere.associaDescrizione(id);

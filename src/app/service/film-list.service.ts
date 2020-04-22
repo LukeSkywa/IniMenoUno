@@ -16,11 +16,34 @@ export class FilmListService {
     { id:8, name:"Shape of Water", durataMinuti:250, genere:"psicologico", favourited:false,show:true},
     { id:9, name:"The Clone Wars", durataMinuti:140, genere:"scifi", favourited:false,show:true},
   ];
-
-  getFilmList(): FilmItem[]{
-    return this.filmListStored;
+item:FilmItem;
+  getFilmList(): FilmItem[]{ //restituire tutti tranne i nascosti
+    return this.filmListStored.filter(film => film.show ==true);
   }
-
+  getFavouriteList():FilmItem[]{
+    //restituisce preferiti
+    return this.filmListStored.filter(film => film.favourited ==true);
+  }
+  getHiddenList():FilmItem[]{
+    //restituisce nascosti
+    return this.filmListStored.filter(film => film.show ==false);
+  }
+  setFavourite(id:number){
+    //aggiunge ad una lista quelli preferiti id
+      this.filmListStored.find(item =>item.id==id).favourited=true;
+  }
+  removeFavourite(id:number){
+    //aggiunge ad una lista quelli preferiti id
+      this.filmListStored.find(item =>item.id==id).favourited=false;
+  }
+  setShowStatus(id:number){
+    //aggiunge ad una lista quelli preferiti id
+      this.filmListStored.find(item =>item.id==id).show=true;
+  }
+  removeShowStatus(id:number){
+    //aggiunge ad una lista quelli preferiti id
+      this.filmListStored.find(item =>item.id==id).show=false;
+  }
   setFilmList(filmList:FilmItem[]):void{
     this.filmListStored=filmList;
   }
