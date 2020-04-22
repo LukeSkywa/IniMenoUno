@@ -6,9 +6,7 @@ import { User } from '../models/user.interface';
   providedIn: 'root'
 })
 export class LoginService {
-  add(user: any) {
-    throw new Error("Method not implemented.");
-  }
+  
 
   private filmList:User[]=[
     {username:"123",password:"123",admin:true},
@@ -41,7 +39,7 @@ export class LoginService {
       //se giusto memorizza con pass
       sessionStorage.setItem('user', username);
 
-      this.router.navigateByUrl("/home");
+      this.router.navigateByUrl("/registrazione");
     }
     else console.log("non funzionante")
   }
@@ -54,11 +52,11 @@ export class LoginService {
       this.router.navigateByUrl("/home");
     }
   }
-  /*
+  
   //registrazione
   add(user){
     console.log(user.password);
     user.admin=false;
-    this.gameList.push(user);
-  }*/
+    this.filmList.push(user);
+  }
 }
