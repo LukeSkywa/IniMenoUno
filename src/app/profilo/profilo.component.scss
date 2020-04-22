@@ -1,0 +1,97 @@
+
+
+  .topnav {
+    overflow: hidden;
+    background-color: none;
+  }
+  
+   
+  
+  .topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+   
+  
+  .topnav a:hover {
+    background-color: none;
+    color: black;
+  }
+  
+   
+  
+  .topnav a.active {
+    background-color: none;
+    color: white;
+  }
+  a.destra{
+    float: right
+  }
+  div.centro{
+    text-align: center;
+    position: absolute;
+    left: 42%;
+  }
+  
+   
+  
+  div.sinistra{
+    text-align: right;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    margin: -100px 0 0 -175px;
+  }
+  div.right{
+    text-align: left;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 260px;
+    right: 32%;
+  
+   
+  
+  }
+  hr{
+    width:1px;
+    height:270px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color:green;
+  }
+  h1{
+    color: white;
+  }
+  p{
+    color: white;
+    font-size:25px;
+  }
+  button.login{
+    padding: 10px 45px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: lightblue;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+  
+   
+  
+  }
+  div.bottone{
+    position: absolute;
+    bottom:8%;
+    left: 44%;
+  }

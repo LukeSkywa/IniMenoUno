@@ -64,6 +64,7 @@ export class EditProfileComponent implements OnInit {
     this.profileService.modifica(form);
     this.profileList=this.profileService.getLista();
     window.alert("modifica effettuata");
+    this.router.navigateByUrl("/profilo");
     
   }
   

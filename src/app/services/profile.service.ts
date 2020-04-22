@@ -9,7 +9,7 @@ export class ProfileService {
   constructor() { }
 
   private profileList:ListItem[]=[
-    {Id:1, Nome:"aa", Cognome:"bb"}
+    {Id:1, Nome:"aa", Cognome:"bb",Gender:"M", Email:"aa@mm.com", Telefono:3333665986}
   ]
 
   getLista():ListItem[]{
