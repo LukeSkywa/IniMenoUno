@@ -25,7 +25,7 @@ export class ListaComponent implements OnInit {
   hiddenList:FilmItem[]=[];
   //genereId:string='fps';
   genereId:number=0;
-
+searchword:string;
   filmList:FilmItem[]=[];
   //gameFilter: GameItem[]=[];
   generi: { id: number, genere: string }[];
@@ -83,6 +83,24 @@ export class ListaComponent implements OnInit {
     this.resetcheck=false;
     this.favouritecheck=false;
     this.hidecheck=true;
+  }
+  //this.searcharray = this.filmListService.getFilmList();
+  searcharray:FilmItem[]=[];
+  searchThis(searchword:string){
+    this.searcharray=this.filmListService.getFilmList();
+    if (searchword){
+    this.searcharray = this.searcharray.filter(function (ele, i, array) {
+      let arrayelement = ele.name.toLowerCase();
+      return arrayelement.includes(searchword);
+      
+    });console.log(this.searcharray);
+  }
+  else
+  {
+    this.filmList=this.filmListService.getFilmList();
+    console.log(this.searcharray);
+  }
+  this.filmList=this.searcharray;
   }
   /*ricerca(id:number){
     //this.genereId=this.listGenere.associaDescrizione(id);

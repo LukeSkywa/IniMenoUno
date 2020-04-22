@@ -1,3 +1,15 @@
+<div class="navbody">
+    <div class="topnav">
+        <a>Home</a>
+        <a>Homepage</a>
+        <a>Lista</a>
+        <a>Cards</a>
+        <a>feedback</a>
+        <a>Profilo</a>
+        <a>Esci</a>
+        <input type="text" [(ngModel)]="searchword" (input)="searchThis(searchword)">
+    </div>
+</div>
 <div>
 
     <button mat-button [disabled]="resetcheck" (click)="resetList();" value="reset">
