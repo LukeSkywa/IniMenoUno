@@ -1,27 +1,32 @@
 <div>
-  <a  (click)="registrati()"><img class="plus" src="../../assets/images/plus.png" alt="plus"></a>
+    <a (click)="registrati()"><img class="plus" src="../../assets/images/plus.png" alt="plus"></a>
 </div>
 <div class="accedi">
-  <img class="logocinema" src="../../assets/images/logocinema.png" alt="logo">
-  <p class="accedi">ACCEDI</p>
-  <form class="form">
-    <p></p>
-    <input class="username" type="text" #username value="" placeholder="Nome Utente">
-    <input class="password" type="password" #password value="" placeholder="Password">
+    <img class="logocinema" src="../../assets/images/logocinema.png" alt="logo">
+    <p class="accedi">ACCEDI</p>
+    <form class="form">
+        <p></p>
+        <input class="username" type="text" #username value="" placeholder="Nome Utente">
+        <div><input class="password" type="password" id="password" #password value="" placeholder="Password">
+            <button id="passbutton" mat-button appTogglepass>
+            <mat-icon id="iconeye">remove_red_eye</mat-icon>
+            </button>
+        </div>
 
-    <div>
-      <label class="switch">
+
+        <div>
+            <label class="switch">
         <input type="checkbox">
         <span class="slider round"></span>
       </label>
-    </div>
+        </div>
 
-    <div class="memorizzapassword">Memorizza Password</div>
-    <br><br>
-    <button (click)="login(username.value, password.value)" class="login" type="button" name="login">Accedi</button>
-    
+        <div class="memorizzapassword">Memorizza Password</div>
+        <br><br>
+        <button (click)="login(username.value, password.value)" class="login" type="button" name="login">Accedi</button>
 
-  </form>
+
+    </form>
 
 </div>
 

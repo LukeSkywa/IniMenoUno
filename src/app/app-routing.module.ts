@@ -20,8 +20,7 @@ const filmRoutes: Routes = [
   { path: 'edit-profile', component: EditProfileComponent },
   { path: 'feedback', component: FeedbackComponent },
   { path: 'logout', component: LogoutComponent },
-  { path: 'prova', component: CssComponent },
-  { path: '', redirectTo: '/Login', pathMatch: 'full' }];
+  { path: '', redirectTo: '/login', pathMatch: 'full' }];
 
 
 
