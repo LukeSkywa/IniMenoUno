@@ -26,6 +26,9 @@ export class EditProfileComponent implements OnInit {
       id: '',
       nome:'',
       cognome: '',
+      gender: '',
+      email: '',
+      telefono: '',
       
     });
 
@@ -48,6 +51,9 @@ export class EditProfileComponent implements OnInit {
       id: profilo.Id,
       nome: profilo.Nome,
       cognome: profilo.Cognome,
+      gender: profilo.Gender,
+      email: profilo.Email,
+      telefono: profilo.Telefono,
     });
   }
 
