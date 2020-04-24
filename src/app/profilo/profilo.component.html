@@ -1,0 +1,10 @@
+<div>
+    <ol>
+        <li *ngFor="let ListItem of profileList">
+            Nome:{{ListItem.Nome}}
+            Cognome:{{ListItem.Cognome}}
+            <button (click)="modifica()">Modifica</button>
+        </li>
+    </ol>
+    
+</div>
