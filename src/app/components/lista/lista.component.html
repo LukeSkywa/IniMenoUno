@@ -24,17 +24,19 @@
     </button>
 </div>
 <ng-container *ngFor="let filmItem of filmList | slice : 0 :showmore">
-    <div class="elemento"*ngIf="filmItem.show || hidecheck"> <p>{{filmItem.name}}</p>
+    <div class="elemento" *ngIf="filmItem.show || hidecheck">
+        <p>{{filmItem.name}}</p>
+        <p>{{filmItem.desc}}</p>
         <div class="contenitore">
-        <!--redirect alla pagina di dettaglio-->
-        <button class="icone"[routerLink]="['/FilmDetail', filmItem.id]"><mat-icon>more_vert</mat-icon></button>
-        <!--hide button-->
-        <ng-container *ngIf="filmItem.show ==true; else elseshow"><button class="icone" (click)="removeShowStatus(filmItem.id)"><mat-icon>visibility_off</mat-icon></button></ng-container>
-        <ng-template #elseshow><button class="icone" (click)="setShowStatus(filmItem.id);showHidden();"><mat-icon>visibility</mat-icon></button></ng-template>
-        <!--fav button-->
-        <ng-container *ngIf="filmItem.favourited ==false; else elsebutton"><button class="icone" (click)="setFavourite(filmItem.id)"><mat-icon>favorite_border</mat-icon></button></ng-container>
-        <ng-template #elsebutton><button class="icone" (click)="removeFavourite(filmItem.id);favouriteList();"><mat-icon>favorite</mat-icon></button></ng-template>
-    </div>
+            <!--redirect alla pagina di dettaglio-->
+            <button class="icone" [routerLink]="['/FilmDetail', filmItem.id]"><mat-icon>more_vert</mat-icon></button>
+            <!--hide button-->
+            <ng-container *ngIf="filmItem.show ==true; else elseshow"><button class="icone" (click)="removeShowStatus(filmItem.id)"><mat-icon>visibility_off</mat-icon></button></ng-container>
+            <ng-template #elseshow><button class="icone" (click)="setShowStatus(filmItem.id);showHidden();"><mat-icon>visibility</mat-icon></button></ng-template>
+            <!--fav button-->
+            <ng-container *ngIf="filmItem.favourited ==false; else elsebutton"><button class="icone" (click)="setFavourite(filmItem.id)"><mat-icon>favorite_border</mat-icon></button></ng-container>
+            <ng-template #elsebutton><button class="icone" (click)="removeFavourite(filmItem.id);favouriteList();"><mat-icon>favorite</mat-icon></button></ng-template>
+        </div>
     </div>
 </ng-container>
 <!--showmore/less button-->
