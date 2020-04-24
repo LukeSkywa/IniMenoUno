@@ -24,12 +24,14 @@ export class RegistrazioneComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(user){
-    this.datiUtenti.add(user);
-    this.return();
-  }
-  return(){
+  
+  back(){
     this.router.navigateByUrl("/login");
   }
+  onSubmit(user){
+    this.datiUtenti.add(user);
+    this.router.navigateByUrl("/login");
+  }
+  
 
 }

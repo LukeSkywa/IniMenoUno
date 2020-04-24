@@ -1,0 +1,39 @@
+<div class="navbody">
+    <div class="topnav">
+        <a>Home</a>
+        <a>Homepage</a>
+        <a>Lista</a>
+        <a>Cards</a>
+        <a>feedback</a>
+        <a>Profilo</a>
+        <a>Esci</a>
+        <input type="text" [(ngModel)]="searchword" (input)="searchThis(searchword)">
+    </div>
+</div>
+<div>
+
+    <button mat-button [disabled]="resetcheck" (click)="resetList();" value="reset">
+        <mat-icon>list</mat-icon>
+</button>
+    <button mat-button [disabled]="favouritecheck" (click)="favouriteList();" value="favourites">
+        <mat-icon>favorite</mat-icon>
+</button>
+    <button mat-button [disabled]="hidecheck" (click)="showHidden();" value="hidden">
+            <mat-icon>remove_red_eye</mat-icon>
+    </button>
+</div>
+<ng-container *ngFor="let filmItem of filmList | slice : 0 :showmore">
+    <div *ngIf="filmItem.show || hidecheck"> {{filmItem.name}}
+        <!--redirect alla pagina di dettaglio-->
+        <button [routerLink]="['/FilmDetail', filmItem.id]">></button>
+        <!--hide button-->
+        <ng-container *ngIf="filmItem.show ==true; else elseshow"><button (click)="removeShowStatus(filmItem.id)"> hide</button></ng-container>
+        <ng-template #elseshow><button (click)="setShowStatus(filmItem.id);showHidden();">show</button></ng-template>
+        <!--fav button-->
+        <ng-container *ngIf="filmItem.favourited ==false; else elsebutton"><button (click)="setFavourite(filmItem.id)">Favourite</button></ng-container>
+        <ng-template #elsebutton><button (click)="removeFavourite(filmItem.id);favouriteList();">Unfavourite</button></ng-template>
+    </div>
+</ng-container>
+<!--showmore/less button-->
+<ng-container *ngIf="showmore<filmList.length; else elseblock"><button (click)="showMoreItems()">Mostra Altri</button></ng-container>
+<ng-template #elseblock><button *ngIf="filmList.length>5" (click)="showmore=5">Comprimi</button></ng-template>
