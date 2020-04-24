@@ -1,0 +1,186 @@
+.switch {
+    top: 20px;
+    margin-right: 220px;
+    position: relative;
+    display: inline-block;
+    width: 39px;
+    height: 16px;
+  }
+  
+   
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+   
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+   
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+   
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+   
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+   
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+   
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+   
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  div.accedi{
+    text-align: center;
+    width: 320px;
+    height: 470px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin: -100px 0 0 -175px;
+     background-image: linear-gradient(to right, #006BFF , #00BFFF);
+     border-radius: 15px;
+  }
+  div.accedi2{
+    background-image: linear-gradient(to right, #00BFFF , #006BFF);
+    width: 320px;
+    height: 470px;
+     border-radius: 15px;
+     position: absolute;
+     top: 18%;
+    right: 40%;
+     z-index: -1;
+  }
+  
+   
+  
+  
+  button.login{
+    padding: 10px 45px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: lightblue;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+  
+   
+  
+  }
+  img.logocinema{
+    display: inline-block;
+    width: 20%;
+    height: auto;
+  }
+  img.plus{
+     position:absolute;
+     width: 5%;
+     top:145px;
+     left:790px;
+    z-index:2;
+  }
+  input.username[type=text] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid white;
+    background: none;
+    background:  url("../../assets/images/username.png") no-repeat scroll 4px 4px;
+    padding-left:40px;
+    color: white;
+  }
+  input.password[type=password] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid white;
+    background: none;
+    background: url("../../assets/images/lock.png") no-repeat scroll 4px 4px;
+    padding-left:40px;
+    color: white;
+  }
+  
+   
+  
+  
+  ::-webkit-input-placeholder { /* WebKit browsers */
+      color:white;
+      font-weight: bold;
+  
+   
+  
+  }
+    img.username{
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+  }
+  p{
+    color: white;
+  }
+  img.lock{
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+  }
+  p.accedi{
+    color: white;
+    font-weight: bold;
+  }
+  div.memorizzapassword{
+    color:white;
+    bottom:10px;
+  }
+   
