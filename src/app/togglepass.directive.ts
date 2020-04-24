@@ -11,20 +11,20 @@ export class TogglepassDirective {
   toggle(button: HTMLElement) {
     this._shown = !this._shown;
     if (this._shown) {
-      this.el.nativeElement.setAttribute('type', 'text');
-      button.innerHTML = 'Hide password';
+      document.getElementById("password").setAttribute('type', 'text');
+    
     } else {
-      this.el.nativeElement.setAttribute('type', 'password');
-      button.innerHTML = 'Show password';
+      document.getElementById("password").setAttribute('type', 'password');
+      
     }
   }
   setup() {
     const parent = this.el.nativeElement.parentNode;
-    const button = document.createElement('button');
-    button.innerHTML = `Show password`;
+    const button = this.el.nativeElement;
+    
     button.addEventListener('click', (event) => {
       this.toggle(button);
     });
-    parent.appendChild(button);
+    
   }
 }

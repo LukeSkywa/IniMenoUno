@@ -112,6 +112,19 @@ img.plus {
     z-index: 2;
 }
 
+#passbutton {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    right: 15%;
+    top: 37%;
+}
+
+#iconeye {
+    color: white;
+}
+
 input.username[type=text] {
     width: 70%;
     padding: 12px 20px;
