@@ -1,31 +1,29 @@
-
-
 <div class="topnav">
-  <a class="active" >Home</a>
-  <a >Homepage</a>
-  <a >Lista</a>
-  <a >Cards</a>
-  <a >feedback</a>
-  <a >Profilo</a>
-  <a >Esci</a>
-  <a class="destra" ><img src="../../assets/images/logocinema.png" alt="logo"></a>
+  <a class="active">Home</a>
+  <a>Homepage</a>
+  <a>Lista</a>
+  <a>Cards</a>
+  <a>feedback</a>
+  <a>Profilo</a>
+  <a>Esci</a>
+  <a class="destra"><img src="../../assets/images/logocinema.png" alt="logo"></a>
 </div>
 <div class="centro">
-<h1>BENVENUTO</h1><br>
-<img class="username" src="../../assets/images/username.png" alt="username">
+  <h1>BENVENUTO</h1><br>
+  <img class="username" src="../../assets/images/username.png" alt="username">
 </div><br>
 <div class="form">
   <form class="form" (ngSubmit)="onSubmit(profileform.value)" [formGroup]="profileform">
-    <input class="username" type="text" id="nome"  required formControlName="nome" placeholder="Nome"><br>
-    <input class="username" type="text" id="cognome"  required formControlName="cognome" placeholder="Cognome"><br>
-    <select id="gender"  required formControlName="gender" >
-    <option class="gender" value="Maschio">Maschio</option>
-    <option class="gender"value="femmina">Femmina</option>
+    <input class="username" type="text" id="nome" required formControlName="nome" placeholder="Nome"><br>
+    <input class="username" type="text" id="cognome" required formControlName="cognome" placeholder="Cognome"><br>
+    <select id="gender" required formControlName="gender">
+      <option class="gender" value="Maschio">Maschio</option>
+      <option class="gender" value="femmina">Femmina</option>
     </select><br>
-    <input class="email" type="text" id="email"  required formControlName="email" placeholder="Email"><br>
-    <input class="telefono" type="text" id="telefono"  required formControlName="telefono" placeholder="Telefono"><br>
+    <input class="email" type="text" id="email" required formControlName="email" placeholder="Email"><br>
+    <input class="telefono" type="text" id="telefono" required formControlName="telefono" placeholder="Telefono"><br>
     <button (click)="back()" class="bottone" type="button" name="login">Annulla</button>
-  <button class="bottone" type="submit" >Conferma</button><br>
+    <button class="bottone" type="submit">Conferma</button><br>
   </form>
-  
+
 </div>
