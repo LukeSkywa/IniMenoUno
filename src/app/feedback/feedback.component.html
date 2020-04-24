@@ -18,22 +18,21 @@
   <h2>Inviaci un tuo Feedback!</h2><br>
   </div>
 <div class="form">
-  <form class="form" action="///" method="post">
-    <input class="user" type="text" name="nome" placeholder="Nome"><br>
-    <input class="user" type="text" name="cognome" placeholder="Cognome"><br>
-    <select id="gender" name="gender" form="gender">
+  <form class="form" [formGroup]=feedform (ngSubmit)="onSubmit(feedform)"  >  
+    <input class="user" type="text" id="nome" required formControlName="nome" placeholder="Nome" ><br>
+    <input class="user" type="text" id="cognome" placeholder="Cognome" required formControlName="cognome"><br>
+    <select id="gender"  form="gender" required formControlName="gender">
     <option class="gender" value="Maschio">Maschio</option>
     <option class="gender"value="femmina">Femmina</option>
     </select><br>
-    <input class="email" type="text" name="email" placeholder="Email"><br>
-    <input class="telefono" type="text" name="telefono" placeholder="Telefono"><br>
-    <textarea rows="4" cols="50" name="note" >Note</textarea><br>
+    <input class="email" type="text" id="email" placeholder="Email" required formControlName="email"><br>
+    <input class="telefono" type="text" id="telefono" placeholder="Telefono" required formControlName="telefono"><br>
+    <textarea rows="4" cols="50" id="note" required formControlName="note">Note</textarea><br>
+    <button  class="invia" type="submit" name="invia">Invia</button><br>
   </form>
-      <button (click)="avviso()" class="invia" type="button" name="invia">Invia</button><br>
+      
 </div>
 
  
 
 
-  </body>
-</html>
