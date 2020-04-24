@@ -9,10 +9,10 @@ import { FilmDetailComponent } from './components/film-detail/film-detail.compon
 const filmRoutes: Routes = [
   { path: 'list', component: ListaComponent },
   { path: 'FilmDetail/:id', component: FilmDetailComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'registrazione', component: RegistrazioneComponent },
+  { path: 'login', component: LoginComponent,data: {animation: 'login'} },
+  { path: 'registrazione', component: RegistrazioneComponent,data: {animation: 'registrazione'} },
   { path: 'logout', component: LogoutComponent },
-  { path: '', redirectTo: '/Login', pathMatch: 'full' }];
+  { path: '', redirectTo: '/login', pathMatch: 'full' }];
 
 
 

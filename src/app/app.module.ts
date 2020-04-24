@@ -34,6 +34,7 @@ import { FilmDetailComponent } from './components/film-detail/film-detail.compon
     MatButtonToggleModule, 
     MatIconModule,
     FormsModule,
+    
   ],
   
   providers: [],
