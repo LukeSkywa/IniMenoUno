@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { FilmDetailComponent } from './components/film-detail/film-detail.component';
-import { FormsModule } from '@angular/forms';
+
 
 
 
