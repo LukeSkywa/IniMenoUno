@@ -1,0 +1,29 @@
+<div>
+  <a  (click)="registrati()"><img class="plus" src="../../assets/images/plus.png" alt="plus"></a>
+</div>
+<div class="accedi">
+  <img class="logocinema" src="../../assets/images/logocinema.png" alt="logo">
+  <p class="accedi">ACCEDI</p>
+  <form class="form">
+    <p></p>
+    <input class="username" type="text" #username value="" placeholder="Nome Utente">
+    <input class="password" type="password" #password value="" placeholder="Password">
+
+    <div>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="memorizzapassword">Memorizza Password</div>
+    <br><br>
+    <button (click)="login(username.value, password.value)" class="login" type="button" name="login">Accedi</button>
+    
+
+  </form>
+
+</div>
+
+<div class="accedi2">
+</div>

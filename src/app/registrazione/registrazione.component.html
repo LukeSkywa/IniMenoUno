@@ -1,0 +1,18 @@
+<div><a (click)="back()"><img class="x" src="../../assets/images/x.png" alt="x"></a> </div>
+<div class="accedi">
+    <br>
+    <img class="logocinema" src="../../assets/images/logocinema.png" alt="logo"><br><br>
+    <p class="accedi">Registrati</p>
+    <form class="form" action="index.html" method="post" [formGroup]="signform" (ngSubmit)="onSubmit(signform.value)">
+        <input class="username" type="text" id="username" value="" required formControlName="username"
+            placeholder="Nome Utente"><br>
+        <input class="password" type="password" id="password" value="" required formControlName="password"
+            placeholder="Password"><br><br><br><br><br>
+        <button class="login" type="submit" name="login">Registrati</button><br>
+    </form>
+
+
+</div>
+<div class="accedi2">
+
+</div>
