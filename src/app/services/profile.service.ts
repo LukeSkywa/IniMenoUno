@@ -9,7 +9,7 @@ export class ProfileService {
   constructor() { }
 
   private profileList:ListItem[]=[
-    {Id:1, Nome:"aa", Cognome:"bb"}
+    {Id:1, Nome:"name", Cognome:"surname", Gender:"maschio", Email:"name@example.com", Telefono:null}
   ]
 
   getLista():ListItem[]{
@@ -26,6 +26,10 @@ export class ProfileService {
     this.profileList.forEach(element => {
      element.Nome=profilo.nome;   
      element.Cognome=profilo.cognome;
+     element.Gender=profilo.gender;   
+     element.Email=profilo.email;
+     element.Telefono=profilo.telefono;
+
     });
   }
 
