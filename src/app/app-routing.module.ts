@@ -9,6 +9,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ListaComponent } from "./components/lista/lista.component";
 import { FilmDetailComponent } from './components/film-detail/film-detail.component';
+import { CssComponent } from './css/css.component';
 
 const filmRoutes: Routes = [
   { path: 'list', component: ListaComponent },

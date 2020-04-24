@@ -16,6 +16,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { FilmDetailComponent } from './components/film-detail/film-detail.component';
 import { TogglepassDirective } from './togglepass.directive';
+import { CssComponent } from './css/css.component';
+
+
 
 
 
@@ -31,6 +34,7 @@ import { TogglepassDirective } from './togglepass.directive';
     ListaComponent,
     FilmDetailComponent,
     TogglepassDirective,
+    CssComponent,
   ],
   imports: [
     BrowserModule,
