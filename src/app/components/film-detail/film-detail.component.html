@@ -1,5 +1,17 @@
-<h2>{{film.name}}</h2>
-<p>Durata:{{film.durataMinuti}} minuti</p>
+<div class="navbody">
+    <div class="topnav">
+        <a ><button class="indietro" [routerLink]="['/list']"><mat-icon class="indietro">keyboard_backspace</mat-icon></button></a>
+        <a>{{film.name}}</a>
+        <a class="destra"><img src="../../assets/images/logocinema.png" alt="logocinema"></a>
+    </div>
+</div>
+<div>
+
+<div class="sinistra">
+<h1 class="sinistra">{{film.name}}</h1><br><br><br>
+<p class="testa">Durata:{{film.durataMinuti}} minuti</p>
 <p>genere: {{film.genere}}</p>
+</div><br>
+
 <p>{{film.desc}}</p>
 <button [routerLink]="['/list']">Torna Alla Lista</button>

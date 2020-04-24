@@ -25,8 +25,10 @@
 </div>
 <ng-container *ngFor="let filmItem of filmList | slice : 0 :showmore">
     <div class="elemento" *ngIf="filmItem.show || hidecheck">
-        <p>{{filmItem.name}}</p>
+        <div class="scritte">
+        <h2>{{filmItem.name}}</h2>
         <p>{{filmItem.desc}}</p>
+    </div>
         <div class="contenitore">
             <!--redirect alla pagina di dettaglio-->
             <button class="icone" [routerLink]="['/FilmDetail', filmItem.id]"><mat-icon>more_vert</mat-icon></button>
