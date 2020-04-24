@@ -1,10 +1,40 @@
-<div>
-    <ol>
-        <li *ngFor="let ListItem of profileList">
-            Nome:{{ListItem.Nome}}
-            Cognome:{{ListItem.Cognome}}
-            <button (click)="modifica()">Modifica</button>
-        </li>
-    </ol>
-    
-</div>
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#homepage">Homepage</a>
+        <a href="#Lista">Lista</a>
+        <a href="#Cards">Cards</a>
+        <a href="#feedback">feedback</a>
+        <a href="#Profilo">Profilo</a>
+        <a href="#Logint">Esci</a>
+        <a class="destra" href="#about"><img src="../../assets/images/logo.png" alt="logo"></a>
+    </div>
+
+    <div class="centro">
+        <h1>BENVENUTO</h1><br>
+        <img src="../../assets/images/username.png" alt="fotoprofilo">
+    </div>
+
+    <div class="sinistra">
+        <p>Nome</p>
+        <p>Cognome</p>
+        <p>Gender</p>
+        <p>Email</p>
+        <p>Telefono</p>
+    </div>
+
+    <div>
+        <hr>
+    </div>
+
+    <div class="right" *ngFor="let ListItem of profileList">
+        <p>{{ListItem.Nome}}</p>
+        <p>{{ListItem.Cognome}}</p>
+        <p>{{ListItem.Gender}}</p>
+        <p>{{ListItem.Email}}</p>
+        <p>{{ListItem.Telefono}}</p>
+    </div>
+
+    <div class="bottone">
+        <button (click)="modifica()" class="login" type="button" name="login">Modifica</button>
+    </div>

@@ -59,4 +59,6 @@ export class LoginService {
     user.admin=false;
     this.filmList.push(user);
   }
+
+  
 }
