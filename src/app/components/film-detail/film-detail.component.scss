@@ -1,0 +1,68 @@
+.topnav {
+    overflow: hidden;
+    background-color: none;
+}
+
+.topnav a {
+    cursor: pointer;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.topnav a:hover {
+    background-color: none;
+    border-bottom: 1px solid white;
+}
+
+
+.topnav a.active {
+    background-color: none;
+    color: white;
+    border-bottom: 1 px solid white;
+}
+
+.topnav a.destra {
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover {
+    background-color: none;
+    border-bottom: 1px solid white;
+}
+.sinistra{
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.sinistra h1{
+    font-size: 500%;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+.sinistra p{
+    color: white;
+    font-size: 250%;
+    margin-left: 10px;
+    
+    
+}
+mat-icon.indietro{
+    color: white;
+    
+}
+button.indietro{
+    background-color: transparent;
+    border: none;
+    padding: none;
+    padding-top: 1px;
+
+}
