@@ -1,12 +1,10 @@
 <div class="navbody">
     <div class="topnav">
-        <a>Home</a>
-        <a>Homepage</a>
-        <a>Lista</a>
-        <a>Cards</a>
-        <a>feedback</a>
-        <a>Profilo</a>
-        <a>Esci</a>
+        <a [routerLink]="['/home']">Home</a>
+        <a [routerLink]="['/list']">Lista</a>
+        <a [routerLink]="['/feedback']">feedback</a>
+        <a [routerLink]="['/profilo']">Profilo</a>
+        <a [routerLink]="['/login']">Esci</a>
         <a class="destra"><img src="../../assets/images/logocinema.png" alt="logocinema"></a>
         <a class="destra"><input type="text" [(ngModel)]="searchword" (input)="searchThis(searchword)" placeholder="Cerca"></a>
     </div>
@@ -26,9 +24,9 @@
 <ng-container *ngFor="let filmItem of filmList | slice : 0 :showmore">
     <div class="elemento" *ngIf="filmItem.show || hidecheck">
         <div class="scritte">
-        <h2>{{filmItem.name}}</h2>
-        <p>{{filmItem.desc}}</p>
-    </div>
+            <h2>{{filmItem.name}}</h2>
+            <p>{{filmItem.desc}}</p>
+        </div>
         <div class="contenitore">
             <!--redirect alla pagina di dettaglio-->
             <button class="icone" [routerLink]="['/FilmDetail', filmItem.id]"><mat-icon>more_vert</mat-icon></button>

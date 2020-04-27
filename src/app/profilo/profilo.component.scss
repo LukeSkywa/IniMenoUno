@@ -1,46 +1,38 @@
-
-
-  .topnav {
+.topnav {
     overflow: hidden;
     background-color: none;
-  }
-  
-   
-  
-  .topnav a {
+}
+
+.topnav a {
     float: left;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
-  
-   
-  
-  .topnav a:hover {
+}
+
+.topnav a:hover {
     background-color: none;
-    color: black;
-  }
-  
-   
-  
-  .topnav a.active {
+    border-bottom: 1px solid white;
+}
+
+.topnav a.active {
     background-color: none;
     color: white;
-  }
-  a.destra{
+}
+
+a.destra {
     float: right
-  }
-  div.centro{
+}
+
+div.centro {
     text-align: center;
     position: absolute;
     left: 42%;
-  }
-  
-   
-  
-  div.sinistra{
+}
+
+div.sinistra {
     text-align: right;
     width: 200px;
     height: 300px;
@@ -48,31 +40,36 @@
     top: 55%;
     left: 45%;
     margin: -100px 0 0 -175px;
-  }
-  div.right{
+}
+
+div.right {
     text-align: left;
     width: 200px;
     height: 300px;
     position: fixed;
     top: 39%;
     left: 54%;
-  }
-  hr{
-    width:1px;
-    height:270px;
+}
+
+hr {
+    width: 1px;
+    height: 270px;
     position: absolute;
     top: 40%;
     left: 50%;
-    color:green;
-  }
-  h1{
+    color: green;
+}
+
+h1 {
     color: white;
-  }
-  p{
+}
+
+p {
     color: white;
-    font-size:25px;
-  }
-  button.login{
+    font-size: 25px;
+}
+
+button.login {
     padding: 10px 45px;
     font-size: 24px;
     cursor: pointer;
@@ -83,12 +80,10 @@
     background-color: white;
     border: none;
     border-radius: 30px;
-  
-   
-  
-  }
-  div.bottone{
+}
+
+div.bottone {
     position: absolute;
-    bottom:8%;
+    bottom: 8%;
     left: 44%;
-  }
+}

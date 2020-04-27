@@ -1,28 +1,26 @@
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#homepage">Homepage</a>
-  <a href="#Lista">Lista</a>
-  <a href="#Cards">Cards</a>
-  <a href="#feedback">feedback</a>
-  <a href="#Profilo">Profilo</a>
-  <a href="#Logint">Esci</a>
-  <a class="destra" href="#about"><img src="../../assets/images/logocinema.png" alt="logo"></a>
+    <a [routerLink]="['/home']">Home</a>
+    <a [routerLink]="['/list']">Lista</a>
+    <a [routerLink]="['/feedback']">feedback</a>
+    <a [routerLink]="['/profilo']">Profilo</a>
+    <a [routerLink]="['/login']">Esci</a>
+    <a class="destra" href="#about"><img src="../../assets/images/logocinema.png" alt="logo"></a>
 </div>
 <div class="centro">
-  <h2>Inviaci un tuo Feedback!</h2><br>
+    <h2>Inviaci un tuo Feedback!</h2><br>
 </div>
 <div class="form">
-  <form class="form" [formGroup]=feedform (ngSubmit)="onSubmit(feedform)">
-    <input class="user" type="text" id="nome" required formControlName="nome" placeholder="Nome"><br>
-    <input class="user" type="text" id="cognome" placeholder="Cognome" required formControlName="cognome"><br>
-    <select id="gender" form="gender" required formControlName="gender">
+    <form class="form" [formGroup]=feedform (ngSubmit)="onSubmit(feedform)">
+        <input class="user" type="text" id="nome" required formControlName="nome" placeholder="Nome"><br>
+        <input class="user" type="text" id="cognome" placeholder="Cognome" required formControlName="cognome"><br>
+        <select id="gender" form="gender" required formControlName="gender">
       <option class="gender" value="Maschio">Maschio</option>
       <option class="gender" value="femmina">Femmina</option>
     </select><br>
-    <input class="email" type="text" id="email" placeholder="Email" required formControlName="email"><br>
-    <input class="telefono" type="text" id="telefono" placeholder="Telefono" required formControlName="telefono"><br>
-    <textarea rows="4" cols="50" id="note" required formControlName="note">Note</textarea><br>
-    <button class="invia" type="submit" name="invia">Invia</button><br>
-  </form>
+        <input class="email" type="text" id="email" placeholder="Email" required formControlName="email"><br>
+        <input class="telefono" type="text" id="telefono" placeholder="Telefono" required formControlName="telefono"><br>
+        <textarea rows="4" cols="50" id="note" required formControlName="note">Note</textarea><br>
+        <button class="invia" type="submit" name="invia">Invia</button><br>
+    </form>
 
 </div>
