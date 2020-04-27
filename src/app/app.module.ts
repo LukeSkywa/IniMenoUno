@@ -20,6 +20,7 @@ import { TogglepassDirective } from './togglepass.directive';
 import { CssComponent } from './css/css.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -37,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     FilmDetailComponent,
     TogglepassDirective,
     CssComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

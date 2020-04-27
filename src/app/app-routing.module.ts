@@ -10,6 +10,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { ListaComponent } from "./components/lista/lista.component";
 import { FilmDetailComponent } from './components/film-detail/film-detail.component';
 import { CssComponent } from './css/css.component';
+import { HomeComponent } from './home/home.component';
 
 const filmRoutes: Routes = [
   { path: 'list', component: ListaComponent },
@@ -20,6 +21,7 @@ const filmRoutes: Routes = [
   { path: 'edit-profile', component: EditProfileComponent },
   { path: 'feedback', component: FeedbackComponent },
   { path: 'logout', component: LogoutComponent },
+  { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }];
 
 
