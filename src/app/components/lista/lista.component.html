@@ -27,6 +27,7 @@
             <h2>{{filmItem.name}}</h2>
             <p>{{filmItem.desc}}</p>
         </div>
+        <img class="listimg" src={{filmItem.img}} alt="">
         <div class="contenitore">
             <!--redirect alla pagina di dettaglio-->
             <button class="icone" [routerLink]="['/FilmDetail', filmItem.id]"><mat-icon>more_vert</mat-icon></button>

@@ -6,4 +6,5 @@ export interface FilmItem {
     favourited: boolean ;
     show:boolean;
     desc:string;
+    img:string;
 }
