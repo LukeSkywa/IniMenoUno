@@ -48,10 +48,11 @@
     margin-top: 20px;
     margin-bottom: 80px;
 }
-.sinistra p{
+h2{
     color: white;
-    font-size: 250%;
+    font-size: 150%;
     margin-left: 10px;
+    float: left;
     
     
 }
@@ -65,4 +66,20 @@ button.indietro{
     padding: none;
     padding-top: 1px;
 
+}
+div.destra{
+    float: right;
+    margin-right: 40px;
+    text-align: left;
+    font-size: 30px;
+    color: white;
+}
+.descrizione{
+    width: 400px;
+    height: 200px;
+    margin-left: 10px;
+}
+div.centro{
+    position: absolute;
+    left: 50%;
 }

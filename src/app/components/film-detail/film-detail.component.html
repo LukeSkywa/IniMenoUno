@@ -5,13 +5,22 @@
         <a class="destra"><img src="../../assets/images/logocinema.png" alt="logocinema"></a>
     </div>
 </div>
-<div>
+
 
 <div class="sinistra">
-<h1 class="sinistra">{{film.name}}</h1><br><br><br>
-<p class="testa">Durata:{{film.durataMinuti}} minuti</p>
-<p>genere: {{film.genere}}</p>
-</div><br>
+<h1 class="sinistra">{{film.name}}<br></h1>
+</div>
+<div class="descrizione">
+    <h2><p>{{film.desc}}</p></h2>
+</div>
 
-<p>{{film.desc}}</p>
-<button [routerLink]="['/list']">Torna Alla Lista</button>
+<div class="centro">
+    <img src={{film.desc}} alt="">
+</div>
+
+
+<div class="destra">
+   <p>Durata: {{film.durataMinuti}}</p>
+   <p>Genere: {{film.genere}}</p>
+</div>
+
