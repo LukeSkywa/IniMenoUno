@@ -11,16 +11,15 @@ import { ListaComponent } from "./components/lista/lista.component";
 import { FilmDetailComponent } from './components/film-detail/film-detail.component';
 
 const filmRoutes: Routes = [
-  { path: 'list', component: ListaComponent },
-  { path: 'FilmDetail/:id', component: FilmDetailComponent },
+  { path: 'list', component: ListaComponent,  canActivate: [MyRouteGuardService] },
+  { path: 'FilmDetail/:id', component: FilmDetailComponent , canActivate: [MyRouteGuardService] },
   { path: 'login', component: LoginComponent },
-  { path: 'registrazione', component: RegistrazioneComponent },
-  { path: 'profilo', component: ProfiloComponent },
-  { path: 'edit-profile', component: EditProfileComponent },
-  { path: 'feedback', component: FeedbackComponent },
-  { path: 'logout', component: LogoutComponent },
+  { path: 'registrazione', component: RegistrazioneComponent , canActivate: [MyRouteGuardService]},
+  { path: 'profilo', component: ProfiloComponent , canActivate: [MyRouteGuardService]},
+  { path: 'edit-profile', component: EditProfileComponent, canActivate: [MyRouteGuardService] },
+  { path: 'feedback', component: FeedbackComponent , canActivate: [MyRouteGuardService]},
+  { path: 'logout', component: LogoutComponent, canActivate: [MyRouteGuardService] },
   { path: '', redirectTo: '/Login', pathMatch: 'full' }];
-
 
 
 @NgModule({
