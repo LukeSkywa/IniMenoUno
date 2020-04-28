@@ -1,6 +1,6 @@
 <div class="navbody">
     <div class="topnav">
-        <a ><button class="indietro" [routerLink]="['/list']"><mat-icon class="indietro">keyboard_backspace</mat-icon></button></a>
+        <a><button class="indietro" [routerLink]="['/list']"><mat-icon class="indietro">keyboard_backspace</mat-icon></button></a>
         <a>{{film.name}}</a>
         <a class="destra"><img src="../../assets/images/logocinema.png" alt="logocinema"></a>
     </div>
@@ -8,19 +8,29 @@
 
 
 <div class="sinistra">
-<h1 class="sinistra">{{film.name}}<br></h1>
+    <h1 class="sinistra">{{film.name}}<br></h1>
 </div>
 <div class="descrizione">
-    <h2><p>{{film.desc}}</p></h2>
+    <h2>
+        <p>{{film.desc}}</p>
+    </h2>
 </div>
 
 <div class="centro">
-    <img  class="listimg"src={{film.img}} alt="">
+    <img class="listimg" src={{film.img}} alt="">
 </div>
 
 
 <div class="destra">
-   <p>Durata: {{film.durataMinuti}}</p>
-   <p>Genere: {{film.genere}}</p>
+    <p>Durata: {{film.durataMinuti}}</p>
+    <p>Genere: {{film.genere}}</p>
 </div>
 
+<div class="navbar">
+    <a><img src="../../assets/images/facebook.png" alt="facebook"></a>
+    <a><img src="../../assets/images/instagram.png" alt="instagram"></a>
+    <a><img src="../../assets/images/twitter.png" alt="telegram"></a>
+    <a><img src="../../assets/images/snapchat.png" alt="telegram"></a>
+    <a><img src="../../assets/images/pinterest.png" alt="telegram"></a>
+
+</div>
