@@ -19,7 +19,6 @@
     border-bottom: 1px solid white;
 }
 
-
 .topnav a.active {
     background-color: none;
     color: white;
@@ -32,84 +31,90 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    cursor: default;
 }
+
 .topnav a:hover {
     background-color: none;
     border-bottom: 1px solid white;
 }
-#carosello{
+
+#carosello {
     width: 43%;
     height: 43%;
     float: right;
     margin-top: 20%;
     margin-right: 20px;
 }
-#carosello2{
+
+#carosello2 {
     width: 40%;
     height: 40%;
     float: left;
     margin-left: 20px;
     margin-top: 20px;
-    
 }
 
-h1.titolo{
+h1.titolo {
     color: white;
     font-size: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 2px 2px 4px black;
     text-align: center;
 }
+
 .navbar {
     overflow: hidden;
     background-color: none;
     position: fixed;
     bottom: 0;
     width: 100%;
-  }
-  
-  .navbar a {
+}
+
+.navbar a {
     float: left;
     display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
+}
 
-  
-  .main {
+.main {
     padding: 16px;
     margin-bottom: 30px;
-  }
-    button.lingua{
-      color: white;
-      background: none;
-      height: 30px;
-      width: 30px;
-      padding: auto;
-      text-decoration: none;
-      font-size: 17px;
-      border:  1px solid white;
-      border-radius: 100px;
-      text-align: center;
-    }
-    button.linguaita{
-      color: #006BFF;
-      background: white;
-      height: 30px;
-      width: 30px;
-      padding: auto;
-      text-decoration: none;
-      font-size: 17px;
-      border:  1px solid white;
-      border-radius: 100px;
-      text-align: center;
-    }
-    p.descrizione{
-      color: white;
-      font-size: 25px;
-      text-align: center;
-      margin-top: 20%;
-      text-shadow: 2px 2px 4px black;
-    }
+}
+
+button.lingua {
+    color: white;
+    background: none;
+    height: 30px;
+    width: 30px;
+    padding: auto;
+    text-decoration: none;
+    font-size: 17px;
+    border: 1px solid white;
+    border-radius: 100px;
+    text-align: center;
+}
+
+button.linguaita {
+    color: #006BFF;
+    background: white;
+    height: 30px;
+    width: 30px;
+    padding: auto;
+    text-decoration: none;
+    font-size: 17px;
+    border: 1px solid white;
+    border-radius: 100px;
+    text-align: center;
+}
+
+p.descrizione {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20%;
+    text-shadow: 2px 2px 4px black;
+}
