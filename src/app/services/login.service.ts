@@ -39,7 +39,7 @@ export class LoginService {
       //se giusto memorizza con pass
       sessionStorage.setItem('user', username);
 
-      this.router.navigateByUrl("/list");
+      this.router.navigateByUrl("/home");
     }
     else console.log("non funzionante")
   }

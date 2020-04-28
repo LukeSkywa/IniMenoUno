@@ -11,17 +11,18 @@ import { ListaComponent } from "./components/lista/lista.component";
 import { FilmDetailComponent } from './components/film-detail/film-detail.component';
 import { CssComponent } from './css/css.component';
 import { HomeComponent } from './home/home.component';
+import { LoginGuard } from './services/guard/login.guard';
 
 const filmRoutes: Routes = [
-  { path: 'list', component: ListaComponent },
-  { path: 'FilmDetail/:id', component: FilmDetailComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'registrazione', component: RegistrazioneComponent },
-  { path: 'profilo', component: ProfiloComponent },
-  { path: 'edit-profile', component: EditProfileComponent },
-  { path: 'feedback', component: FeedbackComponent },
+  { path: 'list', component: ListaComponent ,canActivate:[MyRouteGuardService] },
+  { path: 'FilmDetail/:id', component: FilmDetailComponent,canActivate:[MyRouteGuardService] },
+  { path: 'login', component: LoginComponent,canActivate:[LoginGuard] },
+  { path: 'registrazione', component: RegistrazioneComponent,canActivate:[LoginGuard] },
+  { path: 'profilo', component: ProfiloComponent ,canActivate:[MyRouteGuardService]},
+  { path: 'edit-profile', component: EditProfileComponent,canActivate:[MyRouteGuardService] },
+  { path: 'feedback', component: FeedbackComponent,canActivate:[MyRouteGuardService] },
   { path: 'logout', component: LogoutComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent,canActivate:[MyRouteGuardService] },
   { path: '', redirectTo: '/login', pathMatch: 'full' }];
 
 
