@@ -13,6 +13,10 @@
     height: 0;
 }
 
+body {
+    background-image: none !important;
+}
+
 .slider {
     position: absolute;
     cursor: pointer;
