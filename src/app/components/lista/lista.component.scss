@@ -4,10 +4,12 @@
 }
 
 .listimg {
-    max-width: 120px;
-    max-height: 120px;
-    display: inline-block;
+    max-width: 90px;
+    max-height: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
     resize: both;
+    float: left;
 }
 
 .topnav a {
@@ -87,10 +89,11 @@ div.elemento {
     margin-right: 20%;
 }
 
-.elemento p {
-    float: left;
+.elemento h3 {
+   
     color: blue;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding-left: 10px;
 }
 
 .contenitore {
@@ -127,3 +130,25 @@ button.more {
     height: 15px;
     margin-left: 10px;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  mat-icon.iconcine{
+      margin-top: 7px;
+      margin-right: 10px;
+  }
