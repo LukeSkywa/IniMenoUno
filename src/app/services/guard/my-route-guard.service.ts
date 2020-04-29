@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MyRouteGuardService {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { };
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     if (sessionStorage.getItem('user') != null) {

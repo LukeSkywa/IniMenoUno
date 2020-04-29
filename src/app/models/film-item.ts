@@ -5,4 +5,6 @@ export interface FilmItem {
     genere: string;
     favourited: boolean ;
     show:boolean;
+    desc:string;
+    img:string;
 }

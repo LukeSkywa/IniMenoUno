@@ -9,6 +9,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ListaComponent } from "./components/lista/lista.component";
 import { FilmDetailComponent } from './components/film-detail/film-detail.component';
+import { CssComponent } from './css/css.component';
+import { HomeComponent } from './home/home.component';
+import { LoginGuard } from './services/guard/login.guard';
 
 const filmRoutes: Routes = [
   { path: 'list', component: ListaComponent,  canActivate: [MyRouteGuardService] },
@@ -20,6 +23,7 @@ const filmRoutes: Routes = [
   { path: 'feedback', component: FeedbackComponent , canActivate: [MyRouteGuardService]},
   { path: 'logout', component: LogoutComponent, canActivate: [MyRouteGuardService] },
   { path: '', redirectTo: '/Login', pathMatch: 'full' }];
+  
 
 
 @NgModule({

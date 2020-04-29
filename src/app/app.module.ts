@@ -16,7 +16,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { FilmDetailComponent } from './components/film-detail/film-detail.component';
+import { TogglepassDirective } from './togglepass.directive';
+import { CssComponent } from './css/css.component';
+
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -32,6 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     LogoutComponent,
     ListaComponent,
     FilmDetailComponent,
+    TogglepassDirective,
+    CssComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,113 @@
+.topnav {
+    overflow: hidden;
+    background-color: none;
+}
+
+.topnav a {
+    cursor: pointer;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.topnav a:hover {
+    background-color: none;
+    border-bottom: 1px solid white;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a.active {
+    background-color: none;
+    color: white;
+    border-bottom: 1 px solid white;
+}
+
+.topnav a.destra {
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: none;
+    border-bottom: 1px solid white;
+}
+
+.sinistra {
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.sinistra h1 {
+    font-size: 500%;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+h2 {
+    color: white;
+    font-size: 150%;
+    margin-left: 10px;
+    float: left;
+}
+
+mat-icon.indietro {
+    color: white;
+}
+
+button.indietro {
+    background-color: transparent;
+    border: none;
+    padding: none;
+    padding-top: 1px;
+}
+
+div.destra {
+    float: right;
+    margin-right: 40px;
+    text-align: left;
+    font-size: 30px;
+    color: white;
+}
+
+.descrizione {
+    width: 400px;
+    height: 200px;
+    margin-left: 10px;
+}
+
+div.centro {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+}
+
+img.listimg {
+    max-width: 280px;
+    max-height: 600px;
+    resize: both;
+}

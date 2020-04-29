@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
    //nei pulsanti/altro metodo
    sessionStorage.setItem('user', username);
    sessionStorage.setItem('password', password);
-
+   sessionStorage.setItem("login","login");
    this.listaFilm.eseguiLoginS();
  }
  registrati(){

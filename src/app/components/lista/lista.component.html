@@ -1,39 +1,60 @@
 <div class="navbody">
     <div class="topnav">
-        <a>Home</a>
-        <a>Homepage</a>
-        <a>Lista</a>
-        <a>Cards</a>
-        <a>feedback</a>
-        <a>Profilo</a>
-        <a>Esci</a>
-        <input type="text" [(ngModel)]="searchword" (input)="searchThis(searchword)">
+        <a [routerLink]="['/home']">Home</a>
+        <a [routerLink]="['/list']">Lista</a>
+        <a [routerLink]="['/feedback']">feedback</a>
+        <a [routerLink]="['/profilo']">Profilo</a>
+        <a [routerLink]="['/login']">Esci</a>
+        <a class="destra"><img src="../../assets/images/logocinema.png" alt="logocinema"></a>
+        <a class="destra"><input type="text" [(ngModel)]="searchword" (input)="searchThis(searchword)" placeholder="Cerca"></a>
     </div>
 </div>
 <div>
 
-    <button mat-button [disabled]="resetcheck" (click)="resetList();" value="reset">
-        <mat-icon>list</mat-icon>
+    <button class="bottone" mat-button [disabled]="resetcheck" (click)="resetList();" value="reset">
+        Tutti
 </button>
-    <button mat-button [disabled]="favouritecheck" (click)="favouriteList();" value="favourites">
-        <mat-icon>favorite</mat-icon>
+    <button class="bottone" mat-button [disabled]="favouritecheck" (click)="favouriteList();" value="favourites">
+        Preferiti
 </button>
-    <button mat-button [disabled]="hidecheck" (click)="showHidden();" value="hidden">
-            <mat-icon>remove_red_eye</mat-icon>
+    <button class="bottone" mat-button [disabled]="hidecheck" (click)="showHidden();" value="hidden">
+            Nascosti
     </button>
 </div>
+
 <ng-container *ngFor="let filmItem of filmList | slice : 0 :showmore">
-    <div *ngIf="filmItem.show || hidecheck"> {{filmItem.name}}
-        <!--redirect alla pagina di dettaglio-->
-        <button [routerLink]="['/FilmDetail', filmItem.id]">></button>
-        <!--hide button-->
-        <ng-container *ngIf="filmItem.show ==true; else elseshow"><button (click)="removeShowStatus(filmItem.id)"> hide</button></ng-container>
-        <ng-template #elseshow><button (click)="setShowStatus(filmItem.id);showHidden();">show</button></ng-template>
-        <!--fav button-->
-        <ng-container *ngIf="filmItem.favourited ==false; else elsebutton"><button (click)="setFavourite(filmItem.id)">Favourite</button></ng-container>
-        <ng-template #elsebutton><button (click)="removeFavourite(filmItem.id);favouriteList();">Unfavourite</button></ng-template>
+
+
+    <div class="elemento" *ngIf="filmItem.show || hidecheck">
+        <img class="listimg" src={{filmItem.img}} alt="">
+        <div class="scritte">
+
+            <h2>{{filmItem.name}}</h2>
+            <h3>{{filmItem.desc}}</h3>
+        </div>
+
+        <div class="contenitore">
+            <div class="dropdown">
+                <span><mat-icon>more_vert</mat-icon></span>
+                <div class="dropdown-content">
+                    <div>
+                        <!--redirect alla pagina di dettaglio-->
+                        <button class="icone" [routerLink]="['/FilmDetail', filmItem.id]"><mat-icon class="iconcine">link</mat-icon> Scopri di più</button></div>
+                    <div>
+                        <!--hide button-->
+                        <ng-container *ngIf="filmItem.show ==true; else elseshow"><button class="icone" (click)="removeShowStatus(filmItem.id)"><mat-icon class="iconcine">visibility_off</mat-icon> Nascondi</button></ng-container>
+                        <ng-template #elseshow><button class="icone" (click)="setShowStatus(filmItem.id);showHidden();"><mat-icon>visibility</mat-icon>Mostra</button></ng-template>
+                    </div>
+                </div>
+            </div>
+            <!--fav button-->
+            <ng-container *ngIf="filmItem.favourited ==false; else elsebutton"><button class="icone" (click)="setFavourite(filmItem.id)"><mat-icon>favorite_border</mat-icon></button></ng-container>
+            <ng-template #elsebutton><button class="icone" (click)="removeFavourite(filmItem.id)"><mat-icon>favorite</mat-icon></button></ng-template>
+            <mat-icon class="iconcine">share</mat-icon>
+        </div>
     </div>
 </ng-container>
+
 <!--showmore/less button-->
-<ng-container *ngIf="showmore<filmList.length; else elseblock"><button (click)="showMoreItems()">Mostra Altri</button></ng-container>
-<ng-template #elseblock><button *ngIf="filmList.length>5" (click)="showmore=5">Comprimi</button></ng-template>
+<ng-container *ngIf="showmore<filmList.length; else elseblock"><button class="more" (click)="showMoreItems()">Mostra di più</button></ng-container>
+<ng-template #elseblock><button class="more" *ngIf="filmList.length>5" (click)="showmore=5">Mostra di meno</button></ng-template>

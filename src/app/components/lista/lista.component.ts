@@ -1,106 +1,108 @@
-import { Component, OnInit, EventEmitter, Output, MissingTranslationStrategy } from '@angular/core';
-import { FilmItem } from 'src/app/models/film-item';
-import { FilmListService } from 'src/app/service/film-list.service';
-import { GeneriService } from 'src/app/service/generi.service';
-
+import {
+  Component,
+  OnInit,
+  EventEmitter,
+  Output,
+  MissingTranslationStrategy,
+} from "@angular/core";
+import { FilmItem } from "src/app/models/film-item";
+import { FilmListService } from "src/app/service/film-list.service";
+import { GeneriService } from "src/app/service/generi.service";
 
 @Component({
-  selector: 'app-lista',
-  templateUrl: './lista.component.html',
-  styleUrls: ['./lista.component.scss']
+  selector: "app-lista",
+  templateUrl: "./lista.component.html",
+  styleUrls: ["./lista.component.scss"],
 })
 export class ListaComponent implements OnInit {
-  disabledvariable:number;
-  showmore:number= 5;
-  fontStyle:string="bold";
+  disabledvariable: number;
+  showmore: number = 5;
+  fontStyle: string = "bold";
   messaggio: string;
-  resetcheck: boolean=true  ;
-  favouritecheck: boolean=false;
-  hidecheck:boolean=false;
-  favouritedlist:FilmItem[]=[];
+  resetcheck: boolean = true;
+  favouritecheck: boolean = false;
+  hidecheck: boolean = false;
+  favouritedlist: FilmItem[] = [];
   @Output()
-  showDetail: EventEmitter<number>= new EventEmitter();
-  @Output() 
+  showDetail: EventEmitter<number> = new EventEmitter();
+  @Output()
   makeFavourite: EventEmitter<number> = new EventEmitter();
-  hiddenList:FilmItem[]=[];
+  hiddenList: FilmItem[] = [];
   //genereId:string='fps';
-  genereId:number=0;
-searchword:string;
-  filmList:FilmItem[]=[];
+  genereId: number = 0;
+  searchword: string;
+  filmList: FilmItem[] = [];
   //gameFilter: GameItem[]=[];
-  generi: { id: number, genere: string }[];
-  
-  constructor(private filmListService: FilmListService, private listGenere: GeneriService) {
-    this.filmList=filmListService.getFilmList();
-    this.generi=listGenere.getList();
-    this.favouritedlist=filmListService.getFilmList();
-   }
+  generi: { id: number; genere: string }[];
 
-  ngOnInit(): void {
+  constructor(
+    private filmListService: FilmListService,
+    private listGenere: GeneriService
+  ) {
+    this.filmList = filmListService.getFilmList();
+    this.generi = listGenere.getList();
+    this.favouritedlist = filmListService.getFilmList();
   }
 
-  dettaglio(id: number){
+  ngOnInit(): void {}
+
+  dettaglio(id: number) {
     this.showDetail.emit(id);
   }
-  setFavourite(id:number){
+  setFavourite(id: number) {
     this.filmListService.setFavourite(id);
   }
-  removeFavourite(id:number){
+  removeFavourite(id: number) {
     this.filmListService.removeFavourite(id);
   }
-  setShowStatus(id:number){
+  setShowStatus(id: number) {
     this.filmListService.setShowStatus(id);
   }
-  removeShowStatus(id:number){
+  removeShowStatus(id: number) {
     this.filmListService.removeShowStatus(id);
   }
-  showEdit(){
-    if(sessionStorage.getItem('login')==="admin")
-      return true;
+  showEdit() {
+    if (sessionStorage.getItem("login") === "admin") return true;
     return false;
   }
-  showMoreItems()
-  {
-     this.showmore = Number(this.showmore) + 5;        
+  showMoreItems() {
+    this.showmore = Number(this.showmore) + 5;
   }
 
-  resetList()
-  {
-    this.filmList=this.filmListService.getFilmList();
-    
-    this.resetcheck=true;
-    this.favouritecheck=false;
-    this.hidecheck=false;
-  } 
-  favouriteList(){
-    this.filmList=this.filmListService.getFavouriteList();
-    this.resetcheck=false;
-    this.favouritecheck=true;
-    this.hidecheck=false;
+  resetList() {
+    this.filmList = this.filmListService.getFilmList();
+
+    this.resetcheck = true;
+    this.favouritecheck = false;
+    this.hidecheck = false;
   }
-  showHidden(){
-    this.filmList=this.filmListService.getHiddenList();
-    this.resetcheck=false;
-    this.favouritecheck=false;
-    this.hidecheck=true;
+  favouriteList() {
+    this.filmList = this.filmListService.getFavouriteList();
+    this.resetcheck = false;
+    this.favouritecheck = true;
+    this.hidecheck = false;
+  }
+  showHidden() {
+    this.filmList = this.filmListService.getHiddenList();
+    this.resetcheck = false;
+    this.favouritecheck = false;
+    this.hidecheck = true;
   }
   //this.searcharray = this.filmListService.getFilmList();
-  searcharray:FilmItem[]=[];
-  searchThis(searchword:string){
-    this.searcharray=this.filmListService.getFilmList();
-    if (searchword){
-    this.searcharray = this.searcharray.filter(function (ele, i, array) {
-      let arrayelement = ele.name.toLowerCase();
-      return arrayelement.includes(searchword);
-      
-    });console.log(this.searcharray);
-  }
-  else
-  {
-    this.filmList=this.filmListService.getFilmList();
-    console.log(this.searcharray);
-  }
-  this.filmList=this.searcharray;
+  searcharray: FilmItem[] = [];
+  searchThis(searchword: string) {
+    this.searcharray = this.filmListService.getFilmList();
+    if (searchword) {
+      this.searcharray = this.searcharray.filter(function (ele, i, array) {
+        let arrayelement = ele.name.toLowerCase();
+        return arrayelement.includes(searchword);
+      });
+      console.log(this.searcharray);
+    } else {
+      this.filmList = this.filmListService.getFilmList();
+      console.log(this.searcharray);
+    }
+    this.filmList = this.searcharray;
   }
   /*ricerca(id:number){
     //this.genereId=this.listGenere.associaDescrizione(id);

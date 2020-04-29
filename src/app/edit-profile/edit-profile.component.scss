@@ -1,65 +1,65 @@
 .topnav {
     overflow: hidden;
     background-color: none;
-  }
-  
-   
-  
-  .topnav a {
+}
+
+.topnav a {
     float: left;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
-  
-   
-  
-  .topnav a:hover {
+}
+
+.topnav a:hover {
     background-color: none;
     color: black;
-  }
-  
-   
-  
-  .topnav a.active {
+}
+
+.topnav a.active {
     background-color: none;
     color: white;
-  }
-  a.destra{
+}
+
+.topnav a.destra {
     float: right
-  }
-  div.centro{
+}
+
+div.centro {
     text-align: center;
     position: absolute;
-    left: 42%;
+    left: 44%;
     color: white;
-  }
-  img.username{
+}
+
+img.username {
     width: 100px;
     height: auto;
     border-radius: 50px;
     border: 1px solid white;
-  }
-  div.form{
+}
+
+div.form {
     text-align: center;
     position: absolute;
-    left:36%;
-    top:42%;
-  }
-  input[type=text] {
+    left: 36%;
+    top: 42%;
+}
+
+input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid white;
-    background-image: linear-gradient(to right, #006BFF , #00BFFF);
-    padding-left:40px;
+    background-image: linear-gradient(to right, #006BFF, #00BFFF);
+    padding-left: 40px;
     color: white
-  }
-  select {
+}
+
+select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -67,28 +67,28 @@
     border: none;
     border-bottom: 1px solid white;
     background: none;
-    background-color:  #006BFF;
+    background-color: #006BFF;
     color: white;
-    background-image: linear-gradient(to right, #006BFF , #00BFFF);
-    padding-left:40px;
-     }
-     ::-webkit-input-placeholder { /* WebKit browsers */
-         color:white;
-         font-weight: bold;
-     }
-     button.bottone{
-       padding: 10px 45px;
-       font-size: 24px;
-       cursor: pointer;
-       text-align: center;
-       text-decoration: none;
-       outline: none;
-       color: lightblue;
-       background-color: white;
-       border: none;
-       border-radius: 30px;
-       margin-right: 10px;
-  
-   
-  
-     }
+    background-image: linear-gradient(to right, #006BFF, #00BFFF);
+    padding-left: 40px;
+}
+
+ ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: white;
+    font-weight: bold;
+}
+
+button.bottone {
+    padding: 10px 45px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: lightblue;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    margin-right: 10px;
+}
