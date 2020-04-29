@@ -38,7 +38,8 @@ export class LoginService {
     if(this.accesso(username,password)){
       //se giusto memorizza con pass
       sessionStorage.setItem('user', username);
-
+      sessionStorage.setItem("password",password);  
+      sessionStorage.setItem("login","login");
       this.router.navigateByUrl("/home");
     }
     else console.log("non funzionante")

@@ -11,6 +11,7 @@ export class LogoutComponent implements OnInit {
   constructor(private router: Router) { }
 
   logout(){
+    sessionStorage.removeItem("login"); 
     this.router.navigateByUrl("/login");
   }
 

@@ -10,7 +10,7 @@ export class MyRouteGuardService {
   constructor(private router: Router) { };
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    if (sessionStorage.getItem('user') != null) {
+    if (sessionStorage.getItem('login') != null) {
       return true;
     } else {
       this.router.navigateByUrl('/login');
