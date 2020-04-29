@@ -44,7 +44,11 @@ export class EditProfileComponent implements OnInit {
     this.profilo=this.profileService.getProfile(Number(id));
     this.modifica(this.profilo);
   }
-
+  logout(){
+    sessionStorage.removeItem("login"); 
+    this.router.navigateByUrl("/login");
+  }
+  
   //riempio form
   modifica(profilo:ListItem){
     this.profileform=this.fb.group({

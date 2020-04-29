@@ -8,6 +8,7 @@ import {
 import { FilmItem } from "src/app/models/film-item";
 import { FilmListService } from "src/app/service/film-list.service";
 import { GeneriService } from "src/app/service/generi.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-lista",
@@ -37,7 +38,8 @@ export class ListaComponent implements OnInit {
 
   constructor(
     private filmListService: FilmListService,
-    private listGenere: GeneriService
+    private listGenere: GeneriService,
+    private router:Router,
   ) {
     this.filmList = filmListService.getFilmList();
     this.generi = listGenere.getList();
@@ -68,7 +70,10 @@ export class ListaComponent implements OnInit {
   showMoreItems() {
     this.showmore = Number(this.showmore) + 5;
   }
-
+  logout(){
+    sessionStorage.removeItem("login"); 
+    this.router.navigateByUrl("/login");
+  }
   resetList() {
     this.filmList = this.filmListService.getFilmList();
 

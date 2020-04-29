@@ -25,7 +25,10 @@ export class FeedbackComponent implements OnInit {
   }
 
   
-  
+  logout(){
+    sessionStorage.removeItem("login"); 
+    this.router.navigateByUrl("/login");
+  }
   onSubmit(contactForm: FormGroup) {
     if (contactForm.valid) {
       const email = contactForm.value;

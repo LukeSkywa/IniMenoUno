@@ -3,7 +3,7 @@
     <a [routerLink]="['/list']">Lista</a>
     <a [routerLink]="['/feedback']">feedback</a>
     <a [routerLink]="['/profilo']">Profilo</a>
-    <a [routerLink]="['/login']">Esci</a>
+    <a (click)="logout()">Esci</a>
     <a class="destra"><img src="../../assets/images/logocinema.png" alt="logo"></a>
 </div>
 <div class="centro">

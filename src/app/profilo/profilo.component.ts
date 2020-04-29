@@ -18,7 +18,10 @@ export class ProfiloComponent implements OnInit {
   }
 
 
-
+  logout(){
+    sessionStorage.removeItem("login"); 
+    this.router.navigateByUrl("/login");
+  }
   modifica(){
     this.router.navigate(['/edit-profile']);
   }
