@@ -18,7 +18,7 @@ export class ListaComponent implements OnInit {
   disabledvariable: number;
   showmore: number = 5;
   fontStyle: string = "bold";
-  messaggio: string;
+  messaggio: string;  
   resetcheck: boolean = true;
   favouritecheck: boolean = false;
   hidecheck: boolean = false;

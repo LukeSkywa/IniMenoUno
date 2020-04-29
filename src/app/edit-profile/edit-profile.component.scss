@@ -3,7 +3,17 @@
     background-color: none;
 }
 
+.listimg {
+    max-width: 90px;
+    max-height: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    resize: both;
+    float: left;
+}
+
 .topnav a {
+    cursor: pointer;
     float: left;
     color: white;
     text-align: center;
@@ -14,16 +24,26 @@
 
 .topnav a:hover {
     background-color: none;
-    color: black;
+    border-bottom: 1px solid white;
 }
 
 .topnav a.active {
     background-color: none;
     color: white;
+    border-bottom: 1 px solid white;
 }
 
 .topnav a.destra {
-    float: right
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: none;
+    border-bottom: 1px solid white;
 }
 
 div.centro {

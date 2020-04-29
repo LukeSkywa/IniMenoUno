@@ -12,7 +12,7 @@ import { ListItem } from '../models/profile.interface';
 })
 export class EditProfileComponent implements OnInit {
 
-  
+  nome:String="nome";
   profileform:FormGroup;
   attivato:boolean;
   profileList: ListItem[];
