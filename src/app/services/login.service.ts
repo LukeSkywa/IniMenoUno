@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../models/user.interface';
-
+import { MatSnackBar} from '@angular/material/snack-bar';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +13,7 @@ export class LoginService {
     {username:"aaa",password:"aaa",admin:false},
   ]
   
-  constructor(private router: Router){
+  constructor(private router: Router,private snackbar:MatSnackBar){
 
   }
 
@@ -42,7 +42,9 @@ export class LoginService {
       sessionStorage.setItem("login","login");
       this.router.navigateByUrl("/home");
     }
-    else console.log("non funzionante")
+    else {
+      let snackBarRef = this.snackbar.open('Nome o Password errati');
+    }
   }
   //con sessioni
   eseguiLoginS(){
