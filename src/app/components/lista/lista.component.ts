@@ -94,7 +94,7 @@ export class ListaComponent implements OnInit {
     this.searcharray = this.filmListService.getFilmList();
     if (searchword) {
       this.searcharray = this.searcharray.filter(function (ele, i, array) {
-        let arrayelement = ele.name.toLowerCase();
+        let arrayelement = ele.name.toLowerCase().concat(ele.desc.toLowerCase());
         return arrayelement.includes(searchword);
       });
       console.log(this.searcharray);
