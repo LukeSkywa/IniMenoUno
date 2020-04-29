@@ -12,6 +12,7 @@ import { FilmDetailComponent } from './components/film-detail/film-detail.compon
 import { CssComponent } from './css/css.component';
 import { HomeComponent } from './home/home.component';
 import { LoginGuard } from './services/guard/login.guard';
+import { CardsComponent } from './cards/cards.component';
 
 const filmRoutes: Routes = [
   { path: 'list', component: ListaComponent ,canActivate:[MyRouteGuardService] },
@@ -23,6 +24,7 @@ const filmRoutes: Routes = [
   { path: 'feedback', component: FeedbackComponent,canActivate:[MyRouteGuardService] },
   { path: 'logout', component: LogoutComponent },
   { path: 'home', component: HomeComponent,canActivate:[MyRouteGuardService] },
+  { path: 'cards', component: CardsComponent,canActivate:[MyRouteGuardService] },
   { path: '', redirectTo: '/login', pathMatch: 'full' }];
 
 

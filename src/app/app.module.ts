@@ -21,6 +21,7 @@ import { CssComponent } from './css/css.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { CardsComponent } from './cards/cards.component';
 
 
 
@@ -39,6 +40,7 @@ import { HomeComponent } from './home/home.component';
     TogglepassDirective,
     CssComponent,
     HomeComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,
